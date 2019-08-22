@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 20px;
+    background-attachment: fixed;
+    background-image: url(todo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.taskContent {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    min-width: 50vw;
+    min-height: 50%;
+    text-align: center;
+}
+
+.addTask {
+    margin-bottom: 10px;
+}
+
+.btn,
+.task {
+    margin-top: 20px;
+}
+
+
+.btn {
+    position: relative;
+    padding: 5px 15px;
+    background: none;
+    border: 1px solid #3498db;
+    border-radius: 5px;
+    font-size: 20px;
+    color: #3498db;
+    overflow: hidden;
+    transition: 0.8s;
+    cursor: pointer;
+
+
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.btn:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    background: #3498db;
+    z-index: -1;
+    transition: 0.8s;
+    border-radius: 0 0 50% 50%;
+}
+
+.btn:hover:before {
+    height: 180%;
+}
+
+.task {
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid #3498db;
+    transition: 0.8s;
+}
+
+.task:focus {
+    background-color: #3498db;
+    color: #fff;
+}
+
+
+ul {
+    list-style: none;
+    margin: 10px auto;
+    max-width: 80%;
+}
+
+li {
+    display: inline-block;
+    min-width: 150px;
+    position: relative;
+    color: white;
+    line-height: 25px;
+    margin: 5px 5px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    background-color: #3498db;
+    text-align: center;
+    cursor: default;
+    overflow: hidden;
+    transition: 0.2s;
+    word-wrap: break-word;
+    max-width: 75%;
+}
+
+li:hover {
+    background-color: rgb(52, 152, 219, 0.5);
+}
+
+li:hover>.remove {
+    background-color: #3498db;
+    font-weight: bold;
+    /* box-shadow: 0 0 0 5px white; */
+}
+
+.remove {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    border: none;
+    border-radius: 100%;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 25px;
+    line-height: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+h1 {
+    font-size: 25px;
+}
